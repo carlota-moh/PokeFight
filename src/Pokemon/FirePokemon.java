@@ -3,15 +3,11 @@ package Pokemon;
 import java.util.HashSet;
 
 public class FirePokemon extends Pokemon {
-    private static HashSet<Movement> defaultMoves = setDefaultMoves();
-    private HashSet<Movement> pokemonMoves = new HashSet<>();
-
     public FirePokemon(String name) {
         super(name, PokemonType.FIRE);
-        this.pokemonMoves = defaultMoves;
     }
 
-    private static HashSet<Movement> setDefaultMoves() {
+    public HashSet<Movement> getInitialMoves() {
         HashSet<Movement> defaultMoves = new HashSet<>();
         defaultMoves.add(new Movement("SCRATCH", PokemonType.NORMAL, 30, 100, 30));
         defaultMoves.add(new Movement("CUT", PokemonType.NORMAL, 30, 100, 30));

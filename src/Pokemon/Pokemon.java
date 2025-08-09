@@ -1,14 +1,18 @@
 package Pokemon;
 
+import java.util.HashSet;
+
 public abstract class Pokemon {
     private String name;
     final PokemonType type;
-    private int hp;
+    private int HP;
+    private HashSet<Movement> pokemonMoves = new HashSet<>();
 
     public Pokemon(String name, PokemonType type) {
         this.name = name;
         this.type = type;
-        this.hp = 100;
+        this.HP = 100;
+        this.pokemonMoves = getInitialMoves();
     }
 
     public String getName() {
@@ -19,11 +23,22 @@ public abstract class Pokemon {
         this.name = name;
     }
 
-    public int getHp() {
-        return this.hp;
+    public int getHP() {
+        return this.HP;
     }
 
-    public void reduceHp(int damagePoints) {
-        this.hp = this.hp - damagePoints;
+    public void reduceHP(int damagePoints) {
+        this.HP = this.HP - damagePoints;
+    }
+
+    public abstract HashSet<Movement> getInitialMoves();
+
+    public HashSet<Movement> getMovements() {
+        return this.pokemonMoves;
+    }
+
+    public void setMovement(Movement newMove) {
+        // TODO: A pokemon can only have 4 moves
+        this.pokemonMoves.add(newMove);
     }
 }
