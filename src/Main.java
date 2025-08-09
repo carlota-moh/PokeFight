@@ -18,8 +18,8 @@ public class Main {
 
         Player player = new Player(playerName);
         // TODO: Randomly pick from a list of pokemons
-        FirePokemon pokemon = new FirePokemon("Chickpea");
-        System.out.printf(player.getName() + "got assigned" + pokemon.getName());
+        FirePokemon pokemon = new FirePokemon("TORCHIC");
+        System.out.printf(player.getName() + " got assigned " + pokemon.getName());
 
     }
 }

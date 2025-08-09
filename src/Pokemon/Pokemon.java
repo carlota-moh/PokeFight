@@ -1,17 +1,11 @@
 package Pokemon;
 
 public abstract class Pokemon {
-    public enum Type {
-        FIRE,
-        WATER,
-        GRASS
-    }
-
     private String name;
-    final Type type;
+    final PokemonType type;
     private int hp;
 
-    public Pokemon(String name, Type type) {
+    public Pokemon(String name, PokemonType type) {
         this.name = name;
         this.type = type;
         this.hp = 100;
