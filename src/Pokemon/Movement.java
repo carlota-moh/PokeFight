@@ -14,4 +14,9 @@ public class Movement {
         this.accuracy = accuracy;
         this.damage = damage;
     }
+
+    // TODO: map string to value to make this easier
+    public void printMove() {
+        System.out.println("Name: " + this.name + " Type: " + this.type + " PP: " + this.PP + " Accuracy: " + this.accuracy + " Damage: " + this.damage);
+    }
 }

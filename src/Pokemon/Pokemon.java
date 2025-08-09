@@ -33,11 +33,15 @@ public abstract class Pokemon {
 
     public abstract HashSet<Movement> getInitialMoves();
 
-    public HashSet<Movement> getMovements() {
+    public HashSet<Movement> getMoves() {
         return this.pokemonMoves;
     }
 
-    public void setMovement(Movement newMove) {
+    public void printMoves() {
+        this.pokemonMoves.forEach(move -> move.printMove());
+    }
+
+    public void setMovet(Movement newMove) {
         // TODO: A pokemon can only have 4 moves
         this.pokemonMoves.add(newMove);
     }
