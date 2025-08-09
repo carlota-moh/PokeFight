@@ -1,4 +1,3 @@
-import Pokemon.Pokemon.*;
 import Pokemon.*;
 
 public class Player {
